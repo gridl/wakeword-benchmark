@@ -48,8 +48,8 @@ per hour is measured as a number of false positives in an hour. Miss detection i
  utterances an engine rejects incorrectly. Using these definitions we compare the engines for a given false alarm, and therefore the
 engine with a smaller miss detection rate has a better performance.
 
-Two runtime metrics are measured, real time factor and memory usage. Real time factor is computed by dividing the length of input audio to
-to the processing time. It can be thought of as inverse CPU usage. The engine with a higher real time factor is more computationally
+Two runtime metrics are measured, real time factor and memory usage. Real time factor is computed by dividing
+the processing time to the length of input audio. It can be thought of as average CPU usage. The engine with a lower real time factor is more computationally
 efficient (faster).
 
 # Usage
@@ -131,14 +131,14 @@ Also below is the result in presence of noise
 ## Runtime
 
 Below are the runtime measurements (on Raspberry Pi 3). Two metrics are measured (1) real time factor and (2) memory usage.
-Fir ease of interpretation we also added average CPU usage by simply inverting the real time factor.
+For ease of interpretation we also added average CPU usage.
 
 Engine | Real Time Factor | Average CPU Usage | Memory Usage
 :---: | :---: | :---: | :---:
-PocketSphinx | 3.15 | 31.75% | 15.58 MB
-Snowboy | 5.28 | 18.94% | 2.43 MB
-Porcupine | 13.53 | 7.39% | 1.38 MB
-Porcupine Tiny | 29.28 | 3.42% | 0.24  MB
+PocketSphinx | 0.32 | 31.75% | 15.58 MB
+Snowboy | 0.19 | 18.94% | 2.43 MB
+Porcupine | 0.07| 7.39% | 1.38 MB
+Porcupine Tiny | 0.03 | 3.42% | 0.24  MB
 
 # FAQ
 
